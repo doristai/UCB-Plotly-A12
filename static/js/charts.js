@@ -1,5 +1,5 @@
 // Initializing the page and calling the other functions
-function startup() {
+function init() {
 
     // Grabbing the dropdown element
     var selector = d3.select('#selDataset');
@@ -184,4 +184,4 @@ function demographics(id) {
     }).catch(error => console.log(error));
 }
 
-startup();
+init();
