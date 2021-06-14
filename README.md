@@ -1,15 +1,7 @@
-# Plot.ly Homework - Belly Button Biodiversity
+# Plot.ly 
 
 ## Background 
-In this assignment, an interactive dashboard was built to explore the [Belly Button Biodiversity dataset](/data/samples.json), which catalogs the microbes that colonize human navels in JSON format.
-
-The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
-
-Demographics information is dynamically populated based upon  a user-selected test subject ID. A bar chart, bubble chart and a bonus gauge chart also update once the ID is changed. Code has been written using Plotly, JavaScript, HTML, CSS, and D3.js.
-
-All CSS, JS and images required are under the `static` folder. The main HTML file `index.html` is in the root folder of the Github repo.
-
-**The dashboard can be viewed here: <a href="https://neha-nayeem.github.io/plotly-challenge" target="_blank">Belly Button Diversity Dashboard</a>**
+In this assignment, an interactive dashboard was built to explore the [Belly Button Biodiversity dataset](samples.json), which catalogs the microbes that colonize human navels in JSON format.The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.Demographics information is dynamically populated based upon  a user-selected test subject ID. A bar chart, bubble chart and a bonus gauge chart also update once the ID is changed. Code has been written using Plotly, JavaScript, HTML, CSS, and D3.js.
 
 ## Plotly
 
@@ -23,12 +15,16 @@ The ask was to retrieve test subject demographics, and draw a bar chart and bubb
 
 * Since the task was to only plot the top 10 values, the three arrays were sliced and reversed to display the chart as below.
 
-  ![Bar Chart](static/images/bar-chart.png)
+deliverable1![image](https://user-images.githubusercontent.com/70616488/121878433-8dd0f180-ccc0-11eb-9e73-a459110608c0.png)
+
+  
 
 * The entire sample arrays were used to plot a bubble chart.
-  ![Bubble Chart](static/images/bubble-chart.png)
+  
+  deliverable2![image](https://user-images.githubusercontent.com/70616488/121878454-93c6d280-ccc0-11eb-816b-acad7ec50238.png)
 
-* The bonus challenge was to create a gauge chart. Using the [documentation](https://plot.ly/javascript/gauge-charts/), an indicator trace was created with `wfreq` as the value for plotting. 
+
+* The deliverable 3 was to create a gauge chart. Using the [documentation](https://plot.ly/javascript/gauge-charts/), an indicator trace was created with `wfreq` as the value for plotting. 
 
     * Any null values were given a value of zero.
 
@@ -36,12 +32,9 @@ The ask was to retrieve test subject demographics, and draw a bar chart and bubb
 
     * The default bar that indicates the value was set to transparent so that a needle pointer could be used on the chart.
 
-    * To plot the pointer correctly, I referred to [this source](https://com2m.de/blog/technology/gauge-charts-with-plotly/) which explains the math behind the pointer angles.
- ![Gauge Chart](static/images/gauge-chart.png)
+    * To plot the pointer correctly, used source from [this source](https://com2m.de/blog/technology/gauge-charts-with-plotly/) which explains the math behind the pointer angles.
+ guage![image](https://user-images.githubusercontent.com/70616488/121878690-ddafb880-ccc0-11eb-9044-741cc3ba9b52.png)
 
-* A function called `plotCharts(id)` was created that would take in a test subject ID as a parameter and plot all the above charts.
-
-* A function called `resetData()` clears all the divs of the charts and demographic info.
 
 * Another function `init()` calls the resetData() function, populates the dropdown menu with test subject IDs from the dataset and displays data of the first subject as a starting point.
 
@@ -49,14 +42,5 @@ The ask was to retrieve test subject demographics, and draw a bar chart and bubb
 
 ## Dashboard
 
-Bootstrap and custom CSS was used to pretty up the dashboard. A screenshot of the dashboard can be seen below.
+  final![image](https://user-images.githubusercontent.com/70616488/121878738-e7392080-ccc0-11eb-8e26-ac4b6a068b79.png)
 
-  ![Dashboard](static/images/dashboard.png)
-
-## Sources
-
-* Hulcr, J. et al.(2012) _A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable_. Retrieved from: [http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/)
-
-* Gauge Charts with Plotly (help with pointer needle): https://com2m.de/blog/technology/gauge-charts-with-plotly/
-
-* Dashboard background photo by Elena Mozhvilo on [Unsplash](https://unsplash.com/photos/HRjdJddvPu8)
