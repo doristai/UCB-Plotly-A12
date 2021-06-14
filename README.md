@@ -30,7 +30,7 @@ deliverable1![image](https://user-images.githubusercontent.com/70616488/12187843
   deliverable2![image](https://user-images.githubusercontent.com/70616488/121878454-93c6d280-ccc0-11eb-816b-acad7ec50238.png)
 
 
-* The bonus challenge was to create a gauge chart. Using the [documentation](https://plot.ly/javascript/gauge-charts/), an indicator trace was created with `wfreq` as the value for plotting. 
+* The deliverable 3 was to create a gauge chart. Using the [documentation](https://plot.ly/javascript/gauge-charts/), an indicator trace was created with `wfreq` as the value for plotting. 
 
     * Any null values were given a value of zero.
 
