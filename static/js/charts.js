@@ -39,7 +39,7 @@ function buildPlots(id) {
         var result = filtered[0];
         
         Data = [];
-        for (i=0; i<result.sample_values.length; i++){
+        for (i = 0; i < result.sample_values.length; i++){
             Data.push({
                 id: `OTU ${result.otu_ids[i]}`,
                 value: result.sample_values[i],
@@ -71,9 +71,9 @@ function buildPlots(id) {
             }
           };
         
-        var Bardata = [traceBar];
+        var barData = [traceBar];
           
-        var Barlayout = {
+        var barLayout = {
             title: `<span style='font-size:1em; color:#00bcf2'><b>Top 10 OTUs for Subject ${id}<b></span>`,
             xaxis: {autorange: true, title: 'Sample Values'},
             yaxis: {autorange: true},
@@ -82,7 +82,7 @@ function buildPlots(id) {
           };
         
         // Creating the Horizontal Bar Chart
-        Plotly.newPlot("bar", Bardata, Barlayout);
+        Plotly.newPlot("bar", barData, barLayout);
 
         // Bubble Chart
         var traceBubble = {
@@ -97,9 +97,9 @@ function buildPlots(id) {
             text: result.otu_labels
         };
 
-        var Bubbledata = [traceBubble]
+        var bubbleData = [traceBubble]
 
-        var Bubblelayout = {
+        var bubbleLayout = {
             title: `<span style='font-size:1em; color:#00bcf2'><b>OTU Data for Subject ${id}<b></span>`,
             xaxis: {title:'OTU ID'},
             yaxis: {title: 'Sample Values'},
@@ -107,7 +107,7 @@ function buildPlots(id) {
         };
 
         // Creating Bubble Chart
-        Plotly.newPlot('bubble', Bubbledata, Bubblelayout);
+        Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
     }).catch(error => console.log(error));
 }
@@ -171,16 +171,16 @@ function demographics(id) {
             }
         };
 
-        var Gaugedata = [traceGauge];
+        var gaugeData = [traceGauge];
 
-        var Gaugelayout = {
+        var gaugeLayout = {
             width: 350,
             height: 350,
             margin: {t: 25, r:10, l:25, b:25}
         };
 
         // Creating Gauge Chart
-        Plotly.newPlot('gauge', Gaugedata, Gaugelayout);
+        Plotly.newPlot('gauge', gaugeData, gaugeLayout);
     }).catch(error => console.log(error));
 }
 
